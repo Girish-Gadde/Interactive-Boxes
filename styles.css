@@ -1,0 +1,246 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    max-width:  25rem;
+    margin: auto;
+    padding: 1.25rem;
+    background: #fff;
+    color: #333;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #FF6B82;
+  }
+  
+  .box {
+    position: relative;
+    border:  0.125rem solid #c8c8c8;
+    border-radius: 0.5rem;
+    padding: 0.625rem;
+    margin:  0.625rem 0;
+    cursor: pointer;
+    transition: border 0.3s;
+  }
+  
+  .box:hover {
+    border-color: #FF6B82;
+  }
+
+  .boxed-header{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 4%;
+    margin-right: 0.7rem;
+    margin-left: 0.7rem;
+  }
+  
+  .box-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.625rem;
+  }
+
+  .tag-border {
+    position: absolute;
+    top:  -0.4375rem;
+    right: 0.25rem;
+    background: #FF6B82;
+    color: white;
+    padding:  0.25rem 0.5rem; 
+    font-size: 0.7rem;
+    border-radius:  0.25rem 0.25rem 0 0;
+    font-weight: bold;
+  }
+  
+  .discount {
+    background: #FF6B82;
+    color: #fff;
+    padding:  0.125rem 0.375rem;
+    font-size: 0.8rem;
+    border-radius: 0.25rem;
+  }
+  
+  .price {
+    font-weight: bold;
+    font-size:  0.97rem;
+  }
+  
+  .tag {
+    background: #FF6B82;
+    color: white;
+    padding: 0.125rem 0.375rem;   /* 2px 6px */
+    font-size: 0.75rem;
+    border-radius: 0.25rem;       /* 4px */
+  }
+  
+  .box-content {
+    margin-top: 0.625rem;         /* 10px */
+    margin-left: 2.7rem;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  select {
+    padding: 0.25rem; /* 4px */
+    border-radius: 0.25rem; /* 4px */
+    border: 1px solid #FF6B82;
+  }
+  
+  .original-price {
+    text-decoration: line-through;
+    color: rgb(170, 163, 163);
+    font-size: 0.6875rem;
+    text-align: end;
+    font-weight: 400;
+    margin-right: 1.8rem;
+  }
+
+  .standard-price {
+    font-size: 0.75rem; /* 12px */
+    font-weight: 400;
+    position: relative;
+    bottom: 0.5rem; /* 8px */
+    left: 2.8125rem; /* 45px */
+  }
+  
+  .summary {
+    text-align: center;
+    margin-top: 1.25rem; /* 20px */
+  }
+
+  .sub-summary{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5%;
+  }
+
+  .delivery{
+    color:#FF6B82;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  
+  .add-to-cart {
+    background: #FF6B82;
+    color: white;
+    padding: 0.75rem 1.25rem; /* 12px 20px */
+    border: none;
+    border-radius: 0.375rem; /* 6px */
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 22.5rem; /* 360px */
+  }
+  
+  .powered {
+    font-size: 0.8rem;
+    color: #aaa;
+    margin-top: 0.625rem;
+    text-align: end;
+    font-style: italic;
+  }
+
+  .variant {
+    margin-bottom: 0.75rem;
+  }
+  
+  .size-select {
+    width: 4.5rem;
+    min-width: 2rem;
+    height: 1.8rem;
+  }
+  
+  .color-select {
+    width: 5rem;
+    min-width: 2rem;
+    height: 1.8rem;
+  }
+  
+  .select-group {
+    display: inline-block;
+    margin-right: 0.625rem;
+    vertical-align: top;
+  }
+  
+  .select-group label {
+    display: block;
+    font-size: 0.75rem; /* 12px */
+    margin-bottom: 0.3125rem; /* 5px */
+    margin-left: 0.3125rem; /* 5px */
+    color: #333;
+  }
+  
+  .select-group select {
+    padding: 0.125rem 0.375rem; /* 2px 6px */
+    font-size: 0.875rem; /* 14px */
+    border: 1px solid #ccc;
+    border-radius: 0.25rem; /* 4px */
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  .variant:first-of-type > label {
+    position: relative;
+    top: 1.25rem; /* 20px */
+    font-size: 0.75rem; /* 12px */
+  }
+  
+  .variant > label {
+    position: relative;
+    top: 0.3125rem; /* 5px */
+    font-size: 0.75rem; /* 12px */
+  }
+
+  /* Base radio button style */
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #fff;
+  border: 0.125rem solid #ccc;     /* 2px */
+  width: 1rem;                     /* 16px */
+  height: 1rem;                    /* 16px */
+  border-radius: 50%;
+  display: inline-grid;
+  place-content: center;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+/* Dot inside radio when selected */
+input[type="radio"]::before {
+  content: "";
+  width: 0.5rem;                   /* 8px */
+  height: 0.5rem;                  /* 8px */
+  border-radius: 50%;
+  transform: scale(0);
+  background-color: #FF6B82;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* When selected, show the dot and change border */
+input[type="radio"]:checked {
+  border-color: #FF6B82;
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1);
+}
+
+  
+  
+  
+
+  
+  
